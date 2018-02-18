@@ -14,3 +14,46 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+    .card {
+        width: 19%;
+        height: 220px;
+        background-color: #6a1b9a;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
+        color: #FFF;
+        font-size: 6em;
+        display: flex;
+        flex-direction: column;         
+    }
+
+    .card:hover{
+        background-color: #f4511e;
+    }
+
+    .row{
+        margin: 1em 0;
+    }
+    .container-fluid {
+        display: flex;
+        flex-flow: row;
+        flex-basis: auto;
+        justify-content: space-around;      
+        width: 100%;  
+    }
+   
+    .upper, .lower {
+        align-self: flex-start;
+        flex-grow: 1;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .lower {
+        align-self: flex-end;
+        text-transform: lowercase;
+    }
+
