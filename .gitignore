@@ -27,7 +27,14 @@ platforms/
 plugins/
 plugins/android.json
 plugins/ios.json
-www/
+
+#web excluir todo menos 'sounds'
+www/build
+www/assets
+www/index.html
+www/manifest.json
+www/service-worker.js
+
 $RECYCLE.BIN/
 
 .DS_Store
