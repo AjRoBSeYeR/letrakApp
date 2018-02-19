@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { COMUN } from '../../app/comun';
+
 @IonicPage()
 @Component({
   selector: 'page-bokala-erraza',
@@ -20,18 +22,22 @@ export class BokalaErrazaPage {
     this.ondo=0;
     this.txarto=0;
     this.numero=0;
+
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad BokalaErrazaPage');
   }
 
+  /*
   getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
+  */
 
   sound(){
-    this.letra = this.aBokalak[this.getRandomInt(0,4)];
+    this.letra = this.aBokalak[COMUN.getRandomInt(0,4)];
     var audio = new Audio('sounds/'+this.letra+'.wav');
     audio.play();       
   }

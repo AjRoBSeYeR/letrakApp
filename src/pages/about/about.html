@@ -17,9 +17,9 @@
       <ion-thumbnail item-start>
         <img src="assets/imgs/ander_uraga.jpg">
       </ion-thumbnail>
-      <h2>Ander Uraga Real</h2>
+      <h2>{{nombre}}</h2>
       <p>Egilea</p>
-      <p><a href="mailto:ander.uraga@gmail.com">ander.uraga@gmail.com</a></p>      
+      <p><a href="mailto:{{email}}">{{email}}</a></p>      
     </ion-item>
 
     <ion-item>
@@ -40,5 +40,8 @@
     <button (click)="changePrize('3')" ion-button round outline block color="default">Cafe + pintxo 3€</button>
 </ion-row>
 
+<ion-row>
+  <p>Version {{version}}</p>
+</ion-row>
 
 </ion-content>

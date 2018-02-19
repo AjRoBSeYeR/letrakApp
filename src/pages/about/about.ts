@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
+//import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+import { GLOBAL } from '../../app/global';
 
 
 @IonicPage()
@@ -10,15 +12,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AboutPage {
 
-  precio:string;
+  precio: string;
+  email:  string;
+  nombre: string;
+  version: string;
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams,
-    public payPal: PayPal) {
+    public navParams: NavParams
+    /*public payPal: PayPal */) {
 
       this.precio = '1';
+      this.email = GLOBAL.email;
+      this.nombre = GLOBAL.name;
+      this.version = GLOBAL.version;
 
+      /*
       this.payPal.init({
         PayPalEnvironmentProduction: 'YOUR_PRODUCTION_CLIENT_ID',
         PayPalEnvironmentSandbox: 'YOUR_SANDBOX_CLIENT_ID'
@@ -58,6 +67,7 @@ export class AboutPage {
       }, () => {
         // Error in initialization, maybe PayPal isn't supported or something else
       });
+     */ 
 
   }//constructor
 
