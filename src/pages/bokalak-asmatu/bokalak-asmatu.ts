@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the BokalakAsmatuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-bokalak-asmatu',
@@ -17,9 +10,13 @@ export class BokalakAsmatuPage {
 
   letra:string;
   aBokalak = ['a','e','i','o','u'];
+  ondo:number;
+  txarto:number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.letra = "a";
+    this.ondo=0;
+    this.txarto=0;
   }
 
   ionViewDidLoad() {
@@ -32,6 +29,14 @@ export class BokalakAsmatuPage {
 
   bezteBat(){
     this.letra = this.aBokalak[this.getRandomInt(0,4)];
+  }
+
+  ondoGehitu(){
+    this.ondo++;
+  }
+
+  txartoGehitu(){
+    this.txarto++;
   }
 
 }
