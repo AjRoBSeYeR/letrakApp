@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Kredituak</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-row>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/ander_uraga.jpg">
+      </ion-thumbnail>
+      <h2>Ander Uraga Real</h2>
+      <p>Egilea</p>
+      <p><a href="mailto:ander.uraga@gmail.com">ander.uraga@gmail.com</a></p>      
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/imgs/jon_uraga.jpg">
+      </ion-thumbnail>
+      <h2>Jon Uraga Real</h2>
+      <p>Ahotsak</p>      
+    </ion-item>
+  </ion-list>
+
+</ion-row>
+  
+<ion-row>
+    <p>Gustatu bazaizu Gonbidatu zerbaitetara ;-)</p>
+    <button (click)="changePrize('1')"ion-button round outline block color="default">Cafea 1€</button>
+    <button (click)="changePrize('2')" ion-button round outline block color="default">Garagardoa 2€</button>
+    <button (click)="changePrize('3')" ion-button round outline block color="default">Cafe + pintxo 3€</button>
+</ion-row>
+
+
+</ion-content>

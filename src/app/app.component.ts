@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { BokalakAsmatuPage } from '../pages/bokalak-asmatu/bokalak-asmatu';
-import { ListPage } from '../pages/list/list';
+import { AboutPage } from '../pages/about/about';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +24,7 @@ export class MyApp {
     this.pages = [
       { title: 'Bokalen Soinua', component: HomePage },
       { title: 'Bokalak Asmatu', component: BokalakAsmatuPage },
-      { title: 'List', component: ListPage }
+      { title: 'Kredituak', component: AboutPage }
     ];
 
   }
