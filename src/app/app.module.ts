@@ -2,7 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
+
 import { MyApp } from './app.component';
+//import { Comun } from '../comun';
 import { HomePage } from '../pages/home/home';
 import { BokalakAsmatuPage } from '../pages/bokalak-asmatu/bokalak-asmatu';
 import { BokalaErrazaPage } from '../pages/bokala-erraza/bokala-erraza';
@@ -13,7 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp,    
     HomePage,
     BokalakAsmatuPage,
     BokalaErrazaPage,
@@ -25,7 +27,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    MyApp,    
     HomePage,
     BokalakAsmatuPage,
     BokalaErrazaPage,
