@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the ZenbakiErrazakPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import * as $ from 'jquery';
 
 @IonicPage()
 @Component({
@@ -19,12 +13,14 @@ export class ZenbakiErrazakPage {
   aZenbakiak = [0,1,2,3,4,5,6,7,8,9,10];
   ondo:number;
   txarto:number;
+  isEnabled : boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.zenbakia = 0;
     this.ondo = 0;
     this.txarto = 0;
+    this.isEnabled = true;
 
   }
 
@@ -37,13 +33,23 @@ export class ZenbakiErrazakPage {
   }
 
   sound(){
+    this.isEnabled = false;
+    $("#cze").css('pointerEvents','none');  
     this.zenbakia = this.aZenbakiak[this.getRandomInt(0,10)];
     var audio = new Audio('sounds/'+this.zenbakia+'.wav');
-    audio.play();       
+    audio.play();   
+    audio.addEventListener("ended",  (e:Event) => this.fin() );    
+  }
+
+  fin() {
+    console.log('fin reproduccion');
+    this.isEnabled = true;  
+    $("#cze").css('pointerEvents','auto');  
   }
 
 
   check( numSelected ){    
+      $("#cze").css('pointerEvents','none');  
       let soundFile;    
       if ( numSelected == this.zenbakia ){
           soundFile = 'sounds/ondo.wav';
@@ -54,6 +60,7 @@ export class ZenbakiErrazakPage {
       }
       var audio = new Audio(soundFile);
       audio.play();
+      audio.addEventListener("ended",  (e:Event) => this.fin() ); 
   }
 
 

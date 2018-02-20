@@ -7,17 +7,17 @@
     </ion-navbar>
   </ion-header>
   
-  <ion-content padding>
-    
-    
-  
+  <ion-content padding id="cbe">
+     
     <ion-row>
       <ion-col class="text-lodi" col-6>ONDO {{ondo}}</ion-col>
       <ion-col class="text-lodi" col-6>TXARTO {{txarto}}</ion-col>
     </ion-row>
   
     <ion-row>
-      <button ion-button full secondary (click)='sound()'>Soinua</button>
+      <button ion-button full secondary 
+              [disabled]="!isEnabled"
+              (click)='sound()'>Soinua</button>
     </ion-row>
   
      <ion-row></ion-row>

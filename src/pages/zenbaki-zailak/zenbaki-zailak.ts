@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import * as $ from 'jquery';
 
 @IonicPage()
 @Component({
@@ -41,7 +42,9 @@ export class ZenbakiZailakPage {
   }
 
   sound(){
+    $("#czz").css('pointerEvents','none');  
     this.isEnabled = false;
+
     this.aZenbakiak = this.shuffleArray(this.aZenbakiak);
     this.zenbakia = this.aZenbakiak[this.getRandomInt(0,10)];
     var audio = new Audio('sounds/'+this.zenbakia+'.wav');
@@ -52,10 +55,12 @@ export class ZenbakiZailakPage {
 
   fin() {
     console.log('fin reproduccion');
-    this.isEnabled = true;    
+    this.isEnabled = true; 
+    $("#czz").css('pointerEvents','auto');     
   }
 
-  check( numSelected ){    
+  check( numSelected ){  
+      $("#czz").css('pointerEvents','none');    
       let soundFile;    
       if ( numSelected == this.zenbakia ){
           soundFile = 'sounds/ondo.wav';
@@ -66,6 +71,7 @@ export class ZenbakiZailakPage {
       }
       var audio = new Audio(soundFile);
       audio.play();
+      audio.addEventListener("ended",  (e:Event) => this.fin() );
   }
 
 
