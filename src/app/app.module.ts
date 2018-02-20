@@ -8,6 +8,9 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { BokalakAsmatuPage } from '../pages/bokalak-asmatu/bokalak-asmatu';
 import { BokalaErrazaPage } from '../pages/bokala-erraza/bokala-erraza';
+import { ZenbakiErrazakPage } from '../pages/zenbaki-errazak/zenbaki-errazak';
+import { ZenbakiZailakPage } from '../pages/zenbaki-zailak/zenbaki-zailak';
+import { ZenbakiAsmatuPage } from '../pages/zenbaki-asmatu/zenbaki-asmatu';
 import { AboutPage } from '../pages/about/about';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,9 +19,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,    
-    HomePage,
+    HomePage,    
+    BokalakAsmatuPage,
+    BokalaErrazaPage,    
     BokalakAsmatuPage,
     BokalaErrazaPage,
+    ZenbakiErrazakPage,
+    ZenbakiZailakPage,
+    ZenbakiAsmatuPage,
     AboutPage
   ],
   imports: [
@@ -28,9 +36,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,    
-    HomePage,
+    HomePage,    
+    BokalakAsmatuPage,
+    BokalaErrazaPage,    
     BokalakAsmatuPage,
     BokalaErrazaPage,
+    ZenbakiErrazakPage,
+    ZenbakiZailakPage,
+    ZenbakiAsmatuPage,
     AboutPage
   ],
   providers: [

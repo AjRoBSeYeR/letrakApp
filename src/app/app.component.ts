@@ -7,6 +7,9 @@ import { HomePage } from '../pages/home/home';
 import { BokalakAsmatuPage } from '../pages/bokalak-asmatu/bokalak-asmatu';
 import { BokalaErrazaPage } from '../pages/bokala-erraza/bokala-erraza';
 import { AboutPage } from '../pages/about/about';
+import { ZenbakiErrazakPage } from '../pages/zenbaki-errazak/zenbaki-errazak';
+import { ZenbakiZailakPage } from '../pages/zenbaki-zailak/zenbaki-zailak';
+import { ZenbakiAsmatuPage } from '../pages/zenbaki-asmatu/zenbaki-asmatu';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,6 +29,9 @@ export class MyApp {
       { title: 'Bokalen Soinua Zaila', component: HomePage },
       { title: 'Bokalen Soinua Erraza', component: BokalaErrazaPage },
       { title: 'Bokalak Asmatu', component: BokalakAsmatuPage },
+      { title: 'Zenbaki Errazak', component: ZenbakiErrazakPage },
+      { title: 'Zenbaki Zailak', component: ZenbakiZailakPage },
+      { title: 'Zenbakia Asmatu', component: ZenbakiAsmatuPage },
       { title: 'Kredituak', component: AboutPage }
     ];
 

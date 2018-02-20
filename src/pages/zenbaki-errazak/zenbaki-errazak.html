@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Zenbakia Errazak</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-row>
+        <ion-col class="text-lodi" col-6>ONDO {{ondo}}</ion-col>
+        <ion-col class="text-lodi" col-6>TXARTO {{txarto}}</ion-col>
+      </ion-row>
+    
+      <ion-row>
+        <button ion-button full secondary (click)='sound()'>Soinua</button>
+      </ion-row>
+    
+      <ion-row></ion-row>
+    
+      <ion-row>
+          <div class="container-fluid">      
+           <div class="card" *ngFor="let num of aZenbakiak" (click)="check(num)">
+             {{num}}
+           </div>            
+        </div>
+      </ion-row> 
+
+</ion-content>

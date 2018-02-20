@@ -1,50 +1,51 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+/**
+ * Generated class for the ZenbakiErrazakPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
 @IonicPage()
 @Component({
-  selector: 'page-bokala-erraza',
-  templateUrl: 'bokala-erraza.html',
+  selector: 'page-zenbaki-errazak',
+  templateUrl: 'zenbaki-errazak.html',
 })
-export class BokalaErrazaPage {
+export class ZenbakiErrazakPage {
 
-
-  numero:number;
-  letra:string;
+  zenbakia:number;
+  aZenbakiak = [0,1,2,3,4,5,6,7,8,9,10];
   ondo:number;
   txarto:number;
-  aBokalak = ['a','e','i','o','u'];
- 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.ondo=0;
-    this.txarto=0;
-    this.numero=0;
 
-    
+    this.zenbakia = 0;
+    this.ondo = 0;
+    this.txarto = 0;
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BokalaErrazaPage');
+    console.log('ionViewDidLoad ZenbakiErrazakPage');
   }
 
-  
   getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  
 
   sound(){
-    this.letra = this.aBokalak[this.getRandomInt(0,4)];
-    var audio = new Audio('sounds/'+this.letra+'.wav');
+    this.zenbakia = this.aZenbakiak[this.getRandomInt(0,10)];
+    var audio = new Audio('sounds/'+this.zenbakia+'.wav');
     audio.play();       
   }
 
 
-  check( letraSelected ){    
+  check( numSelected ){    
       let soundFile;    
-      if ( letraSelected == this.letra ){
+      if ( numSelected == this.zenbakia ){
           soundFile = 'sounds/ondo.wav';
           this.ondo++;          
       }else{
@@ -55,7 +56,5 @@ export class BokalaErrazaPage {
       audio.play();
   }
 
-
- 
 
 }

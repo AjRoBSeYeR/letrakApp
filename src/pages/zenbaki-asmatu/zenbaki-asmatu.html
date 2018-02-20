@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Zenbakia Asmatu</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <h1>Zein da Zenbakia?</h1>
+    <ion-row>
+        <ion-col class="text-lodi" col-6>ONDO {{ondo}}</ion-col>
+        <ion-col class="text-lodi" col-6>TXARTO {{txarto}}</ion-col>
+      </ion-row>
+    <div class="card">
+        {{zenbakia}}
+    </div>
+    <ion-row>
+      <button ion-button full (click)='bezteBat()'>Bezte Bat</button>
+    </ion-row>
+
+    <ion-row>
+        <ion-col col-6>
+          <button ion-button full color="secondary" (click)='ondoGehitu()'>Ondo</button>
+        </ion-col>
+        <ion-col col-6>
+            <button ion-button full color="danger" (click)='txartoGehitu()'>Txarto</button>
+          </ion-col>  
+    </ion-row>
+
+</ion-content>
