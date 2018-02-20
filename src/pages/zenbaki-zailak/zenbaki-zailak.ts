@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as $ from 'jquery';
 
+import { Comun } from '../../app/comun';
+
 @IonicPage()
 @Component({
   selector: 'page-zenbaki-zailak',
@@ -20,33 +22,19 @@ export class ZenbakiZailakPage {
     this.ondo = 0;
     this.txarto = 0;
     this.isEnabled = true;
-    this.aZenbakiak = this.shuffleArray(this.aZenbakiak);
+    this.aZenbakiak = Comun.shuffleArray(this.aZenbakiak);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ZenbakiErrazakPage');
   }
 
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  shuffleArray(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-    return array;
-  }
-
   sound(){
     $("#czz").css('pointerEvents','none');  
     this.isEnabled = false;
 
-    this.aZenbakiak = this.shuffleArray(this.aZenbakiak);
-    this.zenbakia = this.aZenbakiak[this.getRandomInt(0,10)];
+    this.aZenbakiak = Comun.shuffleArray(this.aZenbakiak);
+    this.zenbakia = this.aZenbakiak[Comun.getRandomInt(0,10)];
     var audio = new Audio('sounds/'+this.zenbakia+'.wav');
     audio.play(); 
     console.log('start reproduccion');

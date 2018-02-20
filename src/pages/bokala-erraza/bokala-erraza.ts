@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as $ from 'jquery';
+import { Comun } from '../../app/comun';
 
 @IonicPage()
 @Component({
@@ -25,18 +26,13 @@ export class BokalaErrazaPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad BokalaErrazaPage');
+    console.log('ionViewDidLoad BokalaErrazaPage');    
   }
-  
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  
-
+ 
   sound(){
     $("#cbe").css('pointerEvents','none');     
     this.isEnabled = false;
-    this.letra = this.aBokalak[this.getRandomInt(0,4)];
+    this.letra = this.aBokalak[Comun.getRandomInt(0,4)];
     var audio = new Audio('sounds/'+this.letra+'.wav');
     audio.play();   
     audio.addEventListener("ended",  (e:Event) => this.fin() );

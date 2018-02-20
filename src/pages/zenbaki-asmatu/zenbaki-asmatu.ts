@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Comun } from '../../app/comun';
 
 @IonicPage()
 @Component({
@@ -24,12 +25,8 @@ export class ZenbakiAsmatuPage {
     console.log('ionViewDidLoad ZenbakiAsmatuPage');
   }
 
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   bezteBat(){
-    this.zenbakia = this.aZenbakiak[this.getRandomInt(0,10)];
+    this.zenbakia = this.aZenbakiak[Comun.getRandomInt(0,10)];
   }
 
   ondoGehitu(){

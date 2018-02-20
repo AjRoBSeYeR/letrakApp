@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { Comun } from '../../app/comun';
+
 @IonicPage()
 @Component({
   selector: 'page-bokalak-asmatu',
@@ -23,12 +25,8 @@ export class BokalakAsmatuPage {
     console.log('ionViewDidLoad BokalakAsmatuPage');
   }
 
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   bezteBat(){
-    this.letra = this.aBokalak[this.getRandomInt(0,4)];
+    this.letra = this.aBokalak[Comun.getRandomInt(0,4)];
   }
 
   ondoGehitu(){

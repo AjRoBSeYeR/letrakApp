@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import * as $ from 'jquery';
+import { Comun } from '../../app/comun';
 
 @Component({
   selector: 'page-home',
@@ -28,12 +29,12 @@ export class HomePage {
     $("#cbz").css('pointerEvents','none');     
     this.isEnabled = false;
 
-    this.letra = this.aBokalak[this.getRandomInt(0,4)];
+    this.letra = this.aBokalak[Comun.getRandomInt(0,4)];
     var audio = new Audio('sounds/'+this.letra+'.wav');
     audio.play();
     audio.addEventListener("ended",  (e:Event) => this.fin() );
 
-    this.aPosicion = this.shuffleArray(this.aPosicion);
+    this.aPosicion = Comun.shuffleArray(this.aPosicion);
     this.margotu();
   }
 
@@ -58,24 +59,6 @@ export class HomePage {
     for( let i=1; i <= this.aPosicion.length ; i++){
         kartak[i-1].style.order = this.aPosicion[i]; 
     }
-  }
-
-  getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  /**
-   * Randomize array element order in-place.
-   * Using Durstenfeld shuffle algorithm.
-   */
-  shuffleArray(array) {
-      for (var i = array.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = array[i];
-          array[i] = array[j];
-          array[j] = temp;
-      }
-      return array;
   }
 
   fin() {
