@@ -1,6 +1,6 @@
 {
   "name": "letrakApp",
-  "app_id": "",
+  "app_id": "ea6ab02f",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

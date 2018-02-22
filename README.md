@@ -1,5 +1,7 @@
 # letrakApp
 
+![Alt text](https://github.com/anderuraga/letrakApp/blob/master/screnshoots/logo_255.png)
+
 App ionic-ekin egina eta mobilentzako egokituta, ume txikiek bokalak eta zenbakiak ikas dezaten.
 App realizada en ionic para que niñ@s puedan aprender las vocales y numeros.
 
