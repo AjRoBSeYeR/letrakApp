@@ -1,4 +1,13 @@
 {
-  "menu": "Menua",
-  "OTRO": "Beste Bat"
+  "idioma": "Hizkuntza",
+  "idioma.eu": "Euskara",
+  "idioma.es": "Gaztelera",
+  
+  "menu": "Menua",  
+  "menu.menu1" : "Bokalen Soinua Erraza",
+  "menu.menu2" : "Bokalen Soinua Zaila",
+  "menu.menu3" : "Bokal Asmatu",
+  "menu.menu4" : "Zenbaki Erraza",
+  "menu.menu5" : "Zenbaki Zaila",
+  "menu.menu6" : "Zenbakia Asmatu"
 }

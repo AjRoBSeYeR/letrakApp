@@ -8,9 +8,16 @@
   <ion-content>
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        {{ p.title | translate }}
       </button>
     </ion-list>
+
+    <ion-list>
+      <h2>Idiomas</h2>
+      <button menuClose ion-item (click)="switchLanguage('eu')">Euskera</button>
+      <button menuClose ion-item (click)="switchLanguage('es')">Castellano</button>
+    </ion-list>
+
   </ion-content>
 
 </ion-menu>

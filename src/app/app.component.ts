@@ -34,11 +34,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Bokalen Soinua Zaila', component: HomePage },
-      { title: 'Bokalen Soinua Erraza', component: BokalaErrazaPage },
-      { title: 'Bokalak Asmatu', component: BokalakAsmatuPage },
-      { title: 'Zenbaki Errazak', component: ZenbakiErrazakPage },
-      { title: 'Zenbaki Zailak', component: ZenbakiZailakPage },
+      { title: 'menu.menu1', component: HomePage },
+      { title: 'menu.menu2' , component: BokalaErrazaPage },
+      { title: 'menu.menu3', component: BokalakAsmatuPage },
+      { title: 'menu.menu4', component: ZenbakiErrazakPage },
+      { title: 'menu.menu5', component: ZenbakiZailakPage },
       { title: 'Zenbakia Asmatu', component: ZenbakiAsmatuPage },
       { title: 'Kredituak', component: AboutPage }
     ];

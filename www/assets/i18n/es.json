@@ -1,4 +1,13 @@
 {
-  "menu": "Menu",
-  "OTRO": "otro o mas"
+  "idioma": "Idioma",
+  "idioma.eu": "Euskera",
+  "idioma.es": "Castellano",
+  
+  "menu": "Menu",  
+  "menu.menu1" : "Vocales Faciles",
+  "menu.menu2" : "Vocales Dificil",
+  "menu.menu3" : "Vocal Adivina",
+  "menu.menu4" : "Numeros Facil",
+  "menu.menu5" : "Numeros Dificil",
+  "menu.menu6" : "Numero Adivina"
 }
