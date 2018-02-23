@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TranslateService } from '@ngx-translate/core';
 
 import { HomePage } from '../pages/home/home';
 import { BokalakAsmatuPage } from '../pages/bokalak-asmatu/bokalak-asmatu';
@@ -21,19 +22,27 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
+  constructor(
+      public platform: Platform, 
+      public statusBar: StatusBar, 
+      public splashScreen: SplashScreen,
+      public translate: TranslateService
+    ) {
 
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Bokalen Soinua Zaila', component: HomePage },
-      { title: 'Bokalen Soinua Erraza', component: BokalaErrazaPage },
-      { title: 'Bokalak Asmatu', component: BokalakAsmatuPage },
-      { title: 'Zenbaki Errazak', component: ZenbakiErrazakPage },
-      { title: 'Zenbaki Zailak', component: ZenbakiZailakPage },
-      { title: 'Zenbakia Asmatu', component: ZenbakiAsmatuPage },
-      { title: 'Kredituak', component: AboutPage }
-    ];
+      this.initializeApp();
+
+      translate.setDefaultLang('es');
+
+      // used for an example of ngFor and navigation
+      this.pages = [
+        { title: 'Bokalen Soinua Zaila', component: HomePage },
+        { title: 'Bokalen Soinua Erraza', component: BokalaErrazaPage },
+        { title: 'Bokalak Asmatu', component: BokalakAsmatuPage },
+        { title: 'Zenbaki Errazak', component: ZenbakiErrazakPage },
+        { title: 'Zenbaki Zailak', component: ZenbakiZailakPage },
+        { title: 'Zenbakia Asmatu', component: ZenbakiAsmatuPage },
+        { title: 'Kredituak', component: AboutPage }
+      ];
 
   }
 
