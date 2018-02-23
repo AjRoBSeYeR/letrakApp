@@ -28,9 +28,8 @@ plugins/
 plugins/android.json
 plugins/ios.json
 
-#web excluir todo menos 'sounds'
+#web excluir todo menos 'sounds' y 'assets'
 www/build
-www/assets
 www/index.html
 www/manifest.json
 www/service-worker.js
